@@ -1,0 +1,25 @@
+--- 
+title: "A tao of programming"
+author: "Dan MacLean"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: danmaclcean/tao_of_programming
+url: 'https://danmaclean.github.io/tao_of_programming/'
+description: "A guide to learning to think like a programmer."
+---
+
+# What is programming
+
+Programming is the task of creating instructions so that a computer can perform a task for you.  
+
+At the highest level programming has two steps: design a solution to a problem then encode the solution so a computer can do the work. The first part is a challenge for creative logic, the second a challenge for language. Programming a computer takes more of our imagination and creativity than it does of our cold, hard logic or mathematics. 
+
+This guide is intended to help a beginner reach an understanding of how to design a solution to a problem in such a way that it can later be translated into a programming language. No coding in a programming language is demonstrated in this guide, instead I focus on the building blocks of solutions for programming: sequences, loops, events, conditions, and I focus on the key computational thinking practices: experimentation and iteration, testing, re-use and abstraction. In this guide we use a graphical tool called Scratch to create and apply these concepts in a computer.
+
+The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.
+
+

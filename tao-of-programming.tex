@@ -1,0 +1,248 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A tao of programming},
+            pdfauthor={Dan MacLean},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{A tao of programming}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Dan MacLean}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-09-17}
+
+\usepackage{booktabs}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{what-is-programming}{%
+\chapter{What is programming}\label{what-is-programming}}
+
+Programming is the task of creating instructions so that a computer can
+perform a task for you.
+
+At the highest level programming has two steps: design a solution to a
+problem then encode the solution so a computer can do the work. The
+first part is a challenge for creative logic, the second a challenge for
+language. Programming a computer takes more of our imagination and
+creativity than it does of our cold, hard logic or mathematics.
+
+This guide is intended to help a beginner reach an understanding of how
+to design a solution to a problem in such a way that it can later be
+translated into a programming language. No coding in a programming
+language is demonstrated in this guide, instead I focus on the building
+blocks of solutions for programming: sequences, loops, events,
+conditions, and I focus on the key computational thinking practices:
+experimentation and iteration, testing, re-use and abstraction. In this
+guide we use a graphical tool called Scratch to create and apply these
+concepts in a computer.
+
+The guide aims to teach an understanding of the way that programs are
+built, before we understand how programs are encoded in a language.
+
+\hypertarget{getting-started}{%
+\chapter{Getting Started}\label{getting-started}}
+
+\begin{quote}
+This is not going to go the way you think.
+\end{quote}
+
+Be prepared, this is not a typical programming course. It will be a
+largely self led exploration of concepts and ideas, not a slog through
+syntax and rote copying. If you've seen a programming guide before,
+forget it. Here your best tools will be your imagination, a notebook, a
+friend and your powers of reflection and criticism. This guide will be
+your research partner in the exploration helping you to reveal the
+fundamental concepts of programming.
+
+For this course you will need.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A computer with an internet connection
+\item
+  A notebook
+\item
+  A friend (actually this is optional, but will be helpful).
+\end{enumerate}
+
+\hypertarget{reflection-and-critique-as-programming-tools}{%
+\section{Reflection and critique as programming
+tools}\label{reflection-and-critique-as-programming-tools}}
+
+The extent to which programming as a professional tool is a
+collaborative effort isn't widely appreciated. Stereotypes of `hackers'
+in media abound - and this stereotype suggests that building a program
+comes from heroic spurts of inspiration and esoteric knowledge. More
+realistically building a program is a slow process that involves
+thinking about a problem, weighing up different potential solutions and
+expressing them. Reflecting on these things and criticising them (in the
+strict neutral sense of evaluating and assessing dispassionately) are
+really important tools for advancing the program.
+
+Many parts of this guide will involve reflection and discussion, so
+having someone you feel comfortable discussing stuff with will be
+helpful. It's not absolutely necessary, though. You can do all of this
+guide by yourself if you'd prefer.
+
+\hypertarget{scratch---our-creativity-tool}{%
+\section{Scratch - Our Creativity
+Tool}\label{scratch---our-creativity-tool}}
+
+Scratch is a free graphical computer program for creating media
+projects. It is available at \url{http://scratch.mit.edu}
+
+With it you can create a wide variety of interactive projects -
+animations, games etc. Hundreds of thousands of people use Scratch
+across the world, including primary school children and Harvard computer
+science undergraduates learning to program. It's designed to be
+accessible yet complete. It encompasses all the key concepts we'll need
+to understand programming. Take a look at this
+\href{https://vimeo.com/65583694}{introductory video}.
+
+Let's investigate Scratch!
+
+\hypertarget{for-you-to-do}{%
+\section{For you to do}\label{for-you-to-do}}
+
+These tasks may seem trivial, hopefully they'll seem playful. Have some
+fun with them.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Sign-up for Scratch \url{https://scratch.mit.edu/}
+\item
+  Browse some starter projects
+  \url{https://scratch.mit.edu/starter_projects/}
+\item
+  In your notebook, sketch ideas for three different Scratch projects
+  you would like to create.
+\item
+  Go to Scratch and make the Scratch cat do something surprising.
+\end{enumerate}
+
+\hypertarget{wait-what}{%
+\subsection{Wait, what?}\label{wait-what}}
+
+Yep, that number four does say to go and do something in Scratch.
+
+\hypertarget{but-you-havent-shown-us-how-to-use-it-are-we-supposed-to-just-go-and-do-it-what-are-we-learning-here}{%
+\subsection{But you haven't shown us how to use it? Are we supposed to
+just go and do it? What are we learning
+here?}\label{but-you-havent-shown-us-how-to-use-it-are-we-supposed-to-just-go-and-do-it-what-are-we-learning-here}}
+
+Glad you asked! The object here would be for you to identify the stomach
+churning desperation that comes from not knowing how to solve something,
+yet being committed to doing so. And with that burning in your gut you
+manage not to be paralysed by the darkness of ignorance and still manage
+to claw your way into the light.
+
+A lot of the time with programming you're not going to know exactly what
+to do upfront. This reaches out to your inquisitiveness and curious
+spirit. Just give it a go - you can't break anything or go wrong.
+
+Look at this way, if you're sitting there thinking you don't know how to
+do it, anything you do will be a surprise!
+
+You can do this, I believe in you.
+
+Here's a \href{worksheets/scratch_surprise.pdf}{starter sheet} if you
+would like a \emph{little} hint.
+
+\hypertarget{s}{%
+\subsection{S}\label{s}}
+
+\hypertarget{diving-in}{%
+\chapter{Diving In}\label{diving-in}}
+
+Now let's talk details.
+
+\bibliography{book.bib}
+
+
+\end{document}

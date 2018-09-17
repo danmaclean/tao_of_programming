@@ -1,0 +1,53 @@
+# Getting Started
+
+> This is not going to go the way you think.
+
+Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you've seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.
+
+For this course you will need. 
+
+1. A computer with an internet connection
+2. A notebook
+3. A friend (actually this is optional, but will be helpful).
+
+## Reflection and critique as programming tools
+
+The extent to which programming is a slow, difficult and often collaborative effort isn't widely appreciated. Stereotypes of 'hackers' in media abound - and this stereotype suggests that building a program comes from heroic spurts of inspiration and esoteric knowledge. More realistically building a program is a slow process that involves thinking about a problem, weighing up different potential solutions and expressing them. Reflecting on these things and criticising them (in the strict neutral sense of evaluating and assessing dispassionately) are really important tools for advancing the program. 
+
+Many parts of this guide will involve reflection and discussion, so having someone you feel comfortable discussing stuff with will be helpful. It's not absolutely necessary, though. You can do all of this guide by yourself if you'd prefer. 
+
+## Scratch - Our Creativity Tool
+
+Scratch is a free graphical computer program for creating media projects. It is available at [http://scratch.mit.edu](http://scratch.mit.edu)
+
+With it you can create a wide variety of interactive projects - animations, games etc. Hundreds of thousands of people use Scratch across the world, including primary school children and Harvard computer science undergraduates learning to program. It's designed to be accessible yet complete. It encompasses all the key concepts we'll need to understand programming. Take a look at this [introductory video](https://vimeo.com/65583694).
+
+
+Let's investigate Scratch!
+
+## For you to do
+
+These tasks may seem trivial, hopefully they'll seem playful. Have some fun with them. 
+
+  1. Sign-up for Scratch [https://scratch.mit.edu/](https://scratch.mit.edu/)
+  2. Browse some starter projects [https://scratch.mit.edu/starter_projects/](https://scratch.mit.edu/starter_projects/)
+  3. In your notebook, sketch ideas for three different Scratch projects you would like to create.
+  4. Go to Scratch and make the Scratch cat do something surprising
+  
+### Wait, what?
+
+Yep, that number four does say to go and do something in Scratch.
+
+### But you haven't shown us how to use it? Are we supposed to just go and do it? What are we learning here?
+
+Glad you asked! The object here would be for you to identify the stomach churning desperation that comes from not knowing how to solve something, yet being committed to doing so. And with that burning in your gut you manage not to be paralysed by the darkness of ignorance and still manage to claw your way into the light. 
+
+A lot of the time with programming you're not going to know exactly what to do upfront. This reaches out to your inquisitiveness and curious spirit. Just give it a go - you can't break anything or go wrong.
+
+Look at this way, if you're sitting there thinking you don't know how to do it, anything you do will be a surprise! 
+
+You can do this, I believe in you. 
+
+Here's a [starter sheet](worksheets/scratch_surprise.pdf) if you would like a _little_ hint.
+
+### Sharing Scratch Projects with Studios

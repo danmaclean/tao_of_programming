@@ -1,0 +1,7 @@
+book_filename: "tao-of-programming"
+chapter_name: "Unit "
+output_dir: docs
+rmd_files: ["index.Rmd", "01-Getting-Started.Rmd", "02-Diving-In.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+delete_merged_file: true
+new_session: yes
