@@ -1,7 +1,7 @@
 --- 
 title: "A tao of programming"
 author: "Dan MacLean"
-date: "2018-09-25"
+date: "2018-09-26"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

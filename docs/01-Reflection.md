@@ -2,9 +2,11 @@
 
 ## Reflection and critique as programming tools
 
-The extent to which programming is a slow, difficult and often collaborative effort isn't widely appreciated. Stereotypes of 'hackers' in media abound - and this stereotype suggests that building a program comes from heroic spurts of inspiration and esoteric knowledge. More realistically building a program is a slow process that involves thinking about a problem, weighing up different potential solutions and expressing them. Reflecting on these things and criticising them (in the strict neutral sense of evaluating and assessing dispassionately) are really important tools for advancing the program. 
+The extent to which programming is a slow, difficult and often collaborative effort isn't widely appreciated. Stereotypes of 'hackers' in media abound - and this stereotype suggests that building a program comes from heroic spurts of inspiration and esoteric knowledge. More realistically, building a program is a slow process that involves thinking about a problem, weighing up different potential solutions and expressing them. Reflecting on problems and potential solutions and criticising them (in the strict neutral sense of evaluating and assessing dispassionately) are really important tools for advancing the solution to a problem and its implementation in a program.
 
-Many parts of this guide will involve reflection and discussion, so having someone you feel comfortable discussing stuff with will be helpful. It's not absolutely necessary, though. You can do all of this guide by yourself if you'd prefer. 
+The aim of this section is to encourage practice in these skills.  
+
+As so much of this guide will involve reflection and criticism, having someone you feel comfortable discussing stuff with will be helpful. It's not absolutely necessary, though. You can do all of this guide by yourself if you'd prefer. 
 
 ## Scratch - our creativity tool
 
@@ -62,7 +64,6 @@ Here's a [studio sheet](worksheets/scratch_studio.pdf) for some hints.
 As you develop programming skills, being able to criticise and find strengths and weaknesses in your and other projects will help you build stronger, better projects.  
 
 Let's think now about criticising each others projects. If you are working with a friend (or group of friends) make sure you can find your projects in the Scratch Surprise Studio. 
-
 ### An important note on groups of friends
 
 When you choose a group of friends for this work, its going to be best if you can find someone with whom you can exchange ideas frankly. In an academic setting, probably not everyone you could work with will work well as a partner in a critique group. A lot of this will depend on different expectations of roles in people from different social and ethnic backgrounds. Try to work with someone at a similar professional level, it can be hard to tell someone in a more senior role that they're wrong , and what they say can be taken as 'the right answer' - when all contributions are valuable. Be aware too of the influence of a person's background on how they'd express a personal opinion. If you're from a place where it feels more natural to go along with the flow, try to find someone you'd be comfortable to express your ideas with. Experiment with sharing views over written media, rather than face to face. 
