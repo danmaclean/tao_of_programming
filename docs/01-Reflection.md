@@ -102,6 +102,9 @@ If you're the sort of person that criticism just bounces off, try to invest some
 * Features: What features does the project have? Does the project work as expected?
 * Appeal: How engaging is the project? Is it interactive, original, sophisticated, funny, or interesting? How did you feel as you interacted with it?
 
+
+## In this section we...
+
 \BeginKnitrBlock{roundup}<div class="roundup">In this section we have endeavoured to practice the reflection skill so necessary for evaluating your designs and creations in software. The iterative development process relies on incremental improvements. Being able to give and receive new ideas (often from yourself) will help massively. </div>\EndKnitrBlock{roundup}
 
 
