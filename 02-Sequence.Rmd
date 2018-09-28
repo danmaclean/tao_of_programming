@@ -66,7 +66,7 @@ Let's examine some broken sequences and try to fix them. In this section the aim
 
 ```{block2, type = "task"}
 
-  1. Do the five debugging challenges described on this [debugging sheet]("worksheets/scratch_debugging.pdf")
+  1. Do the five debugging challenges described on this [debugging sheet](worksheets/scratch_debugging.pdf)
   2. Discuss your testing and debugging practices with a partner. Make note of the similarities and differences in your strategies.
 
 ```  

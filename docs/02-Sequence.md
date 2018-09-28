@@ -61,7 +61,7 @@ In this section we'll examine using small units in different sequences.
 Let's examine some broken sequences and try to fix them. In this section the aim will be to explore the central sequence, and practice iterative testing and de-bugging. This is your first real opportunity to try out the major parts of the development cycle.
 
 \BeginKnitrBlock{task}<div class="task">
-  1. Do the five debugging challenges described on this [debugging sheet]("worksheets/scratch_debugging.pdf")
+  1. Do the five debugging challenges described on this [debugging sheet](worksheets/scratch_debugging.pdf)
   2. Discuss your testing and debugging practices with a partner. Make note of the similarities and differences in your strategies.
 </div>\EndKnitrBlock{task}
 

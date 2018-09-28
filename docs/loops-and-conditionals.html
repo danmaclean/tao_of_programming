@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="reflection.html">
+<link rel="prev" href="sequence.html">
+<link rel="next" href="reuse.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -110,36 +110,99 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A tao of programming</h1>
-<h4 class="author"><em>Dan MacLean</em></h4>
-<h4 class="date"><em>2018-09-28</em></h4>
-</div>
-<div id="what-is-programming" class="section level1">
-<h1><span class="header-section-number">Section 1</span> What is Programming?</h1>
-<p>Programming is the task of creating instructions so that a computer can perform a task for you.</p>
-<p>At the highest level programming has two steps: design a solution to a problem, then encode the solution so a computer can do the work. The first part is a challenge for creative logic, the second a challenge for language. Programming a computer takes more of our imagination and creativity than it does of our cold, hard logic or mathematics.</p>
-<p>This guide is intended to help a beginner reach an understanding of how to design a solution to a problem in such a way that it can later be translated into a programming language. No coding in a programming language is demonstrated in this guide, instead the guide focuses on the building blocks of solutions for programming: sequences, loops, events, conditions, and on the key computational thinking practices: experimentation and iteration, testing, re-use and abstraction. In this guide we use a graphical tool called Scratch to create and apply these concepts in a computer.</p>
-<p>The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.</p>
-<blockquote>
-<p>This is not going to go the way you think.</p>
-</blockquote>
-<p>Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you’ve seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.</p>
-<p>For this course you will need.</p>
-<ol style="list-style-type: decimal">
-<li>A computer with an internet connection</li>
-<li>A notebook</li>
-<li>A friend (actually this is optional, but will be helpful).</li>
-</ol>
+<div id="loops-and-conditionals" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Loops and Conditionals</h1>
+<p>In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.</p>
+<p>A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated.</p>
+<p><img src="assets/loop.png" width="313" /></p>
+<p>These things make a lot more sense when you see them in use. Let’s examine some loops by building some that make music!</p>
 
+<div class="task">
+<ol style="list-style-type: decimal">
+<li>Do the <a href="worksheets/scratch_build_a_band.pdf">build a band worksheet</a></li>
+<li>Experiment with timing and the number of repeats in each repeat section to come up with a pleasing musical arrangement.</li>
+</ol>
+</div>
+
+<p>So that’s the basic idea, loops do stuff over and over. They can do set numbers of repeats, keep going forever or keep going until something else happens.</p>
+<p>Let’s have a look at some code with loops, some of which needs fixing.</p>
+
+<div class="task">
+<ol style="list-style-type: decimal">
+<li>Do the <a href="worksheets/scratch_loop_debugging.pdf">loop debugging worksheet</a></li>
+<li>In your critique groups or your design journal:
+<ul>
+<li>Discuss the importance of the counter in the loop? When can it break the code?</li>
+</ul></li>
+</ol>
+</div>
+
+<div id="types-of-loop-blocks" class="section level2">
+<h2><span class="header-section-number">4.1</span> Types of loop blocks</h2>
+<p>Mostly here we’ve seen the <code>repeat</code> loop block, thats the most obvious sort but there are plenty of variations.</p>
+<ul>
+<li><code>until</code> loop blocks do some code <em>until</em> something happens, that something can be specified by a e.g a sprite hits the side, or a number gets too big.</li>
+<li><code>while</code> loop blocks do some code <em>while</em> some thing is still in some state,</li>
+<li><code>forever</code> loop blocks do some code forever - this is more common than you think, especially in games for example. With these the main block of code just goes forever and stops only when something exceptional happens, like lives reaching <code>0</code>.</li>
+</ul>
+
+<div class="task">
+<ol style="list-style-type: decimal">
+<li>In your critique group or design journal discuss whether all these types of loop are actually interchangeable?</li>
+<li>Is there some sort of redundancy in all of these types of loop?</li>
+<li>What might be the reason for this?</li>
+</ol>
+</div>
+
+</div>
+<div id="conditionals" class="section level2">
+<h2><span class="header-section-number">4.2</span> Conditionals</h2>
+<p>Along the way we’ve already seen a different type of control block - a conditional. This is a block that contains code that will only be done if something specified by the programmer is true. You’ll notice this block because it begins with <code>if</code> and then there’s some thing that must be tested to see if its true, this is the actual condition to be tested.</p>
+<p>You can see the place for the condition in this picture as a gap after the word <code>if</code>, that gap is waiting for the programmer to drop in any sort of thing to test.</p>
+<p><img src="assets/if-else.png" width="61" /></p>
+<p>A conditional (or simply just an <code>if</code> block) is the easiest way to get a computer program make a decision and only do something in certain cases. They are abundant throughout computer programming.</p>
+<p>In the upper form the code in the ‘mouth’ will only be run if the conditional test passes. If it doesn’t pass the test none of that code will be run. The rest of the program will carry on as if that code wasn’t even there.</p>
+<p>The <code>if-else</code> form provides a way to be explicit about what to do if the condition doesn’t pass. If the condition for <code>if</code> doesn’t pass, then the code in the <code>else</code> block runs. Note that the two blocks are mutually exclusive, if one block runs, the other won’t.</p>
+</div>
+<div id="a-creative-project" class="section level2">
+<h2><span class="header-section-number">4.3</span> A creative project</h2>
+<p>It’s time to put some of our skills and creativity to use and build something brand new. For this next section we will build something personalised and/or exciting. Choose one of the activities below and enjoy building something you like!</p>
+
+<div class="task">
+<ol style="list-style-type: decimal">
+<li>Make an interactive collage about yourself,<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> using the <a href="worksheets/scratch_about_me.pdf">About Me worksheet</a> for a bit of guidance.</li>
+</ol>
+<p>or</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Make a music video. Use the <a href="worksheets/scratch_music_video.pdf">Music Video worksheet</a></li>
+</ol>
+</div>
+
+</div>
+<div id="in-this-section-we-2" class="section level2">
+<h2><span class="header-section-number">4.4</span> In this section we…</h2>
+
+<div class="roundup">
+<p>We have encountered blocks and conditionals and use them to make stuff happen over and over, and only when we want it to. They save us from having to write out repetitive code.</p>
+These two types of blocks are at the heart of controlling the sequence of execution of code in a program. Practice with loops and conditionals will make you a powerful master of the things a computer does.
+</div>
+
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Or an alter-ego you’ve constructed for the purposes of this exercise!<a href="loops-and-conditionals.html#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="reflection.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sequence.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reuse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

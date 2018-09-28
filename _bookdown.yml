@@ -1,7 +1,13 @@
 book_filename: "tao-of-programming"
 chapter_name: "Section "
 output_dir: docs
-rmd_files: ["index.Rmd", "01-Reflection.Rmd", "02-Sequence.Rmd", "03-Loops.Rmd"]
+rmd_files: [
+  "index.Rmd", 
+  "01-Reflection.Rmd", 
+  "02-Sequence.Rmd", 
+  "03-Loops.Rmd",
+  "04-Reuse.Rmd"
+]
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 new_session: yes
