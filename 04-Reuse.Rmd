@@ -1,14 +1,16 @@
-# Reuse
+# Re-Use
 
 Reusing code is the cornerstone of productive programming. Reusing libraries and packages built by other people is very common. Reusing your own code - packing it up into little re-usable blocks is also very handy.
 
 Designing your programs such that you can re-use them will bring you great benefits. The code will be easier to build and understand, this means you'll have less trouble building it, take less time and likely have fewer bugs. 
 
-In this section we'll explore personal re-use of something you built by making our own Scratch blocks and also getting hold of and re-using other people's work.
+In this section we'll explore personal re-use of something you built by making our own Scratch blocks.
 
 > We are like dwarfs standing upon the shoulders of giants, and so able to see more and see farther than the ancients.
 – Bernard of Chartres, circa 1130
 
+
+## Implementing blocks
 
 Let's begin by making some blocks of our own.
 
@@ -37,6 +39,10 @@ Let's get a bit more practice and intuition about how blocks work by fixing some
     * Is there an optimal level of re-use?
 
 ```
+
+## Abstraction
+
+A big plus to constructing blocks is that they are a tool for abstraction - they allow us to combine multiple small abilities into one larger, unifiying ability. This means that the amount of thinking we have to do about how our program works is less. In turn this means it is easier for us to progam. 
 
 ## A major insight - its blocks all the way down
 

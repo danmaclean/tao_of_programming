@@ -63,11 +63,7 @@ Here's a [studio sheet](worksheets/scratch_studio.pdf) for some hints.
 
 As you develop programming skills, being able to criticise and find strengths and weaknesses in your and other projects will help you build stronger, better projects.  
 
-Let's think now about criticising each others projects. If you are working with a friend (or group of friends) make sure you can find your projects in the Scratch Surprise Studio. 
-### An important note on groups of friends
-
-When you choose a group of friends for this work, its going to be best if you can find someone with whom you can exchange ideas frankly. In an academic setting, probably not everyone you could work with will work well as a partner in a critique group. A lot of this will depend on different expectations of roles in people from different social and ethnic backgrounds. Try to work with someone at a similar professional level, it can be hard to tell someone in a more senior role that they're wrong , and what they say can be taken as 'the right answer' - when all contributions are valuable. Be aware too of the influence of a person's background on how they'd express a personal opinion. If you're from a place where it feels more natural to go along with the flow, try to find someone you'd be comfortable to express your ideas with. Experiment with sharing views over written media, rather than face to face. 
-
+Let's think now about criticising each others projects. If you are working with a friend (or group of friends) make sure you can find your projects in the Scratch Surprise Studio.
 
 ### What is appropriate criticism?
 
@@ -78,7 +74,7 @@ This is a tricky subject, anything about _the project_ could be criticised legit
 * Find and say a positive before you deliver a negative
 * Don't say something because you haven't said something for a while.
 
-#### Delivering (and receiving) criticism well
+### Delivering (and receiving) criticism well
 
 Some people are totally upset by the slightest perceived negative. These people are awesome to have on a team, they are very valuable as constant re-evaluators: iteration of a project can go much quicker when they're involved. At the other end of the scale some people are impervious to criticism and will take anything you can say and remain upbeat. These people are great at maintaining a positive direction in a team and help stop it from getting mired in details. But such diversity makes it difficult to pitch a point! As you'll have worked out, when delivering a point you need to try to be sensitive about people's views - just because you have a valid point you don't have a right to be rude or insensitive, you still have a responsibility to help maintain the civility of the conversation. 
 
@@ -87,7 +83,7 @@ If you know you're the sort of person whom criticism affects strongly, try to ac
 If you're the sort of person that criticism just bounces off, try to invest some time in thinking specifically about what you've received, try other people's ideas on for size.
 
 \BeginKnitrBlock{task}<div class="task">
-  1. Fill in the table below for each project by each person in your critique group of friends.
+  1. Fill in the table below for each Surprise Scratch project by each person in your critique group of friends.
 </div>\EndKnitrBlock{task}
 
 
@@ -101,6 +97,10 @@ If you're the sort of person that criticism just bounces off, try to invest some
 * Clarity: Did you understand what the project is supposed to do?
 * Features: What features does the project have? Does the project work as expected?
 * Appeal: How engaging is the project? Is it interactive, original, sophisticated, funny, or interesting? How did you feel as you interacted with it?
+
+### An important note on groups of friends
+
+When you choose a group of friends for this work, its going to be best if you can find someone with whom you can exchange ideas frankly. In an academic setting, probably not everyone you could work with will work well as a partner in a critique group. A lot of this will depend on different expectations of roles in people from different social and ethnic backgrounds. Try to work with someone at a similar professional level, it can be hard to tell someone in a more senior role that they're wrong , and what they say can be taken as 'the right answer' - when all contributions are valuable. Be aware too of the influence of a person's background on how they'd express a personal opinion. If you're from a place where it feels more natural to go along with the flow, try to find someone you'd be comfortable to express your ideas with. Experiment with sharing views over written media, rather than face to face. 
 
 
 ## In this section we...

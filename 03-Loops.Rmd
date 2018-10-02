@@ -2,12 +2,14 @@
 
 In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.
 
-A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated. 
+> With just one polka dot, nothing can be achieved.
+ - Yayoi Kusama
+
+A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated for as long as the loop definition says to. The loop definition is the the bit of writing at the top of the mouth.
 
 ```{r, echo = FALSE, fig.width = 6}
   knitr::include_graphics("assets/loop.png")
 ```
-
 
 These things make a lot more sense when you see them in use. Let's examine some loops by building some that make music!
 
@@ -18,8 +20,9 @@ These things make a lot more sense when you see them in use. Let's examine some 
 
 ```
 
-
 So that's the basic idea, loops do stuff over and over. They can do set numbers of repeats, keep going forever or keep going until something else happens.
+
+## Fixing some bugs
 
 Let's have a look at some code with loops, some of which needs fixing. 
 

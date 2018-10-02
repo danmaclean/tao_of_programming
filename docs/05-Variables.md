@@ -1,0 +1,32 @@
+# Variables
+
+Programs will often need to keep track of different things that will change during the course of a program. In this final section we'll make use of some simple variables and make a program that truly computes some stuff in response to inputs. We'll spend most of our time coding and end up having produced a simple game.
+
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+  - Phil Karlton
+
+## Variables - names for changing values
+
+Consider a program that counts some things - minimally it is going to need a tally that it can increase as it finds each new thing. We use code constructs called variables to keep track of changing things. Variables have two parts - a name and a value. So in our counter example, the number of things we've seen is the value, whatever we decide to call that in our program is our name.
+
+\BeginKnitrBlock{reader}<div class="reader">Hold on, isn't that just algebra? When did this turn into maths? What sort of scam are you pulling here?</div>\EndKnitrBlock{reader}
+
+Yes, it is quite like algebra in one sense. But in another sense, the most important sense - the practical  -  it's just names for stuff you don't know the value of at the start. Another distinction is that variables don't need to be just numbers. In other contexts you can keep track of text, pictures, sounds and even code itself. Don't get hung up too much on variables being for numbers.  
+
+## Building a game
+
+Let's go crazy and jump straight into building a simple game that will allow us many opportunities for keeping track of internal data computed by your script in variables. 
+
+\BeginKnitrBlock{task}<div class="task">
+  1. Do the [Maze worksheet](worksheets/scratch_maze.pdf)
+  2. Implement some 'collectable' sprites [^6] that increment a score variable by one when your player sprite touches them. Check out the 'make a variable' block to do this
+  3. Implement some moving 'baddie' sprites [^7] that decrement a life variable when your player sprite touches them. Add a "game over" process that stops the game when you run out of lives.
+  4. Consider adding a high score table. Discuss with a friend how you might do this and write your proposal in your design journal [^8]? 
+</div>\EndKnitrBlock{task}
+
+## In this section we...
+
+\BeginKnitrBlock{roundup}<div class="roundup">In this section we looked at variables. We saw that these are names for data that our program uses and changes accordingly as the program progresses. We marshalled our programming skills to create a game. </div>\EndKnitrBlock{roundup}
+[^6]: Like coins or cherries or something. 
+[^7]: Like ghosts or turtles or something. 
+[^8]: For bonus points, actually implement it.

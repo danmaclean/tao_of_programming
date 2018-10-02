@@ -6,7 +6,9 @@ rmd_files: [
   "01-Reflection.Rmd", 
   "02-Sequence.Rmd", 
   "03-Loops.Rmd",
-  "04-Reuse.Rmd"
+  "04-Reuse.Rmd",
+  "05-Variables.Rmd",
+  "06-Acknowledgements.Rmd"
 ]
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true

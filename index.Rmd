@@ -23,6 +23,7 @@ This guide is intended to help a beginner reach an understanding of how to desig
 The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.
 
 > This is not going to go the way you think.
+  -Luke Skywalker
 
 Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you've seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.
 
