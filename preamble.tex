@@ -1,5 +1,7 @@
 \usepackage{booktabs}
 \usepackage{tcolorbox}
+\usepackage{quotchap}
+
 \usepackage[T1]{fontenc}
 \usepackage{amsthm}
 \makeatletter
@@ -29,3 +31,24 @@ fonttitle=\bfseries] }
 \newenvironment{roundup}
 { \begin{tcolorbox}[colbacktitle=yellow!50!white,title=Round Up,coltitle=black, title filled] }
 {  \end{tcolorbox} }
+
+\newenvironment{myquote}
+{\begin{large}
+\begin{itshape}
+\begin{minipage}{6cm}
+}
+{
+\begin{vspace}{15mm}
+\end{vspace}
+\end{minipage}
+\end{itshape}
+\end{large} 
+}
+
+
+%\newenvironment{headquote}
+%{ 
+%\renewcommand{\footnotesize}{\Large}
+%\begin{savequote}[100mm] 
+%}
+%{  \end{savequote} }

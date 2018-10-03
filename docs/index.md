@@ -1,18 +1,23 @@
 --- 
 title: "A tao of programming"
 author: "Dan MacLean"
-date: "2018-10-02"
+date: "2018-10-03"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: danmaclean/tao_of_programming
-url: 'https://danmaclean.github.io/tao_of_programming/'
+url: "https://danmaclean.github.io/tao_of_programming"
 description: "A guide to learning to think like a programmer."
 ---
 
 # What is Programming?
+
+\BeginKnitrBlock{myquote}<div class="myquote">This is not going to go the way you think.
+
+-Luke Skywalker</div>\EndKnitrBlock{myquote}
+
 
 Programming is the task of creating instructions so that a computer can perform a task for you.  
 
@@ -22,8 +27,7 @@ This guide is intended to help a beginner reach an understanding of how to desig
 
 The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.
 
-> This is not going to go the way you think.
-  -Luke Skywalker
+
 
 Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you've seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.
 

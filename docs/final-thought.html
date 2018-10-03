@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="reflection.html">
-<link rel="next" href="loops-and-conditionals.html">
+<link rel="prev" href="variables.html">
+<link rel="next" href="acknowledgements.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -126,112 +126,21 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sequence" class="section level1">
-<h1><span class="header-section-number">Section 3</span> Sequence</h1>
+<div id="final-thought" class="section level1">
+<h1><span class="header-section-number">Section 7</span> Final thought</h1>
+<p>In this brief guide, we have covered a great deal of ground. The concepts we have discussed are the very core ones of the daily practice of programming. Every time you start to program you’ll use reflection, sequences, iteration and re-doing in the problem solving and design phase. When you come to put code down you’ll implement it with loops and conditionals, variables and code re-use.</p>
+<p>These concepts underpin every programming language. When you move on to build programs in other languages you’ll use all of them. The implementation of loops, conditionals, blocks and variables varies from language to language, but underneath they’re all the sames. For you, all that remains is the challenge of understanding the specific syntax of the new language.</p>
+<p>As I wrote at the beginning the process of making a program is slow, so your first scripts in the new language may not be the most amazing. They’ll improve with practice. You don’t need to be a genius to program computers, you just need patience with yourself and a little determination to get there.</p>
+<p>Good Luck!</p>
 
-<div class="myquote">
-<p>A,B,C. It’s easy as 1,2,3. As simple as do-re-mi.</p>
--The Jackson 5
-</div>
-
-<p>A computer program is a sequence of instructions for a computer to execute. Identifying the proper sequence of events is a vital skill. That’s the main aim of this section - breaking things down into sequences. The secondary aim will be to practice iteration, by experimenting with sequences of things we’ll initially get things wrong, but by iterating each time we will get closer to a good solution.</p>
-<div id="examining-and-building-a-sequence-of-instructions" class="section level2">
-<h2><span class="header-section-number">3.1</span> Examining and building a sequence of instructions</h2>
-<p>Let’s get straight to it and break down a sequence.</p>
-
-<div class="task">
-<ol style="list-style-type: decimal">
-<li>In pairs work out who doesn’t mind being bossed and who doesn’t mind being bossy<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
-<li>Bossed partner: Close your eyes! (or at least look away from the screen)</li>
-<li>Bossy partner: Watch one of the videos<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
-<ul>
-<li><a href="http://vimeo.com/28612347" class="uri">http://vimeo.com/28612347</a></li>
-<li><a href="http://vimeo.com/28612585" class="uri">http://vimeo.com/28612585</a></li>
-<li><a href="http://vimeo.com/28612800" class="uri">http://vimeo.com/28612800</a></li>
-<li><a href="http://vimeo.com/28612970" class="uri">http://vimeo.com/28612970</a></li>
-</ul></li>
-<li>Bossy partner: describe (using spoken words only) how to perform the sequence of moves in the video. Bossed partner: Do only what the bossy partner tells you, are there any points where you need them to be clearer? If they aren’t making sense - say so.</li>
-<li>Write down the steps as you go. Work from the steps.</li>
-<li>In your design journal:
-<ul>
-<li>Reflect on what was easy/difficult about being bossy</li>
-<li>Reflect on what was easy/difficult about being bossed</li>
-<li>What was difficult about watching?</li>
-</ul></li>
-</ol>
-</div>
-
-<p>The process above may have revealed a few points. The most apparent is that in order to be understood it is vital to be explicit about the action. Another is that the receiver of instruction (here the bossed partner) is not (often) able to ‘just do what you meant’ and get it right. The whole process probably took a few goes at least while you worked it out, so iteration is important. The list of instructions you created was a prototype program for a dance! This form of program, not real code - but a good description of the important parts is called <code>pseudocode</code>. The first draft of a real program will often be pseudocode.</p>
-</div>
-<div id="building-a-sequence-with-constraints" class="section level2">
-<h2><span class="header-section-number">3.2</span> Building a sequence with constraints</h2>
-<p>Computer languages don’t have a command for each possible action. They instead have very restricted sets of key commands that must be chained and used creatively to make larger effects. The commands they do have are often quite limited and do very specific tasks.</p>
-<p>This is a deliberate design feature. Flexibility and power comes from these small units, chained together in novel sequences.</p>
-<p>In this section we’ll examine using small units in different sequences.</p>
-
-<div class="task">
-<ol style="list-style-type: decimal">
-<li>Start a new Scratch project</li>
-<li>Using <em>only</em> the below ten blocks, make something that interests you
-<ul>
-<li><code>go to</code></li>
-<li><code>glide</code></li>
-<li><code>say</code></li>
-<li><code>show</code></li>
-<li><code>hide</code></li>
-<li><code>set size</code></li>
-<li><code>play sound</code></li>
-<li><code>wait</code></li>
-<li><code>when this sprite clicked</code></li>
-<li><code>repeat</code></li>
-</ul></li>
-<li>Share your creation in the 10 Blocks Studio <a href="http://scratch.mit.edu/studios/475480" class="uri">http://scratch.mit.edu/studios/475480</a></li>
-<li>In your critique groups or your design journal, discuss the following:
-<ul>
-<li>What was difficult about being able to use 10 blocks?</li>
-<li>What was easy about only being able to use 10 blocks?</li>
-<li>How did the constraint make you think of things differently?</li>
-</ul></li>
-</ol>
-</div>
-
-</div>
-<div id="fixing-some-bugs" class="section level2">
-<h2><span class="header-section-number">3.3</span> Fixing some bugs</h2>
-<p>Let’s examine some broken sequences and try to fix them. In this section the aim will be to explore the central sequence, and practice iterative testing and de-bugging. This is your first opportunity to try out the major parts of the development cycle.</p>
-
-<div class="task">
-<ol style="list-style-type: decimal">
-<li>Do the five debugging challenges described on this <a href="worksheets/scratch_debugging.pdf">debugging sheet</a></li>
-<li>Discuss your testing and debugging practices with a partner. Make note of the similarities and differences in your strategies.</li>
-</ol>
-</div>
-
-</div>
-<div id="in-this-section-we-1" class="section level2">
-<h2><span class="header-section-number">3.4</span> In this section we…</h2>
-
-<div class="roundup">
-<p>In this section we’ve looked at the importance of sequence. Breaking a problem down in to small parts is a key step to solving it. Programs are built from a sequence of small units executed in a particular order. Applying and replying combinations of commands, testing them and repeating until the combination works is the main development loop of programming.</p>
-</div>
-
-
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>As far as you possibly can anyway! If you’re doing this alone you’ll have to do both parts, which may mean developing temporary amnesia. If you can’t decide which of you is which, then choose randomly.<a href="sequence.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>If you have more than one pair in the group, cover as many videos as you can.<a href="sequence.html#fnref2" class="footnote-back">↩</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="reflection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="loops-and-conditionals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="acknowledgements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

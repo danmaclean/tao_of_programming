@@ -1,9 +1,11 @@
 # Variables
 
-Programs will often need to keep track of different things that will change during the course of a program. In this final section we'll make use of some simple variables and make a program that truly computes some stuff in response to inputs. We'll spend most of our time coding and end up having produced a simple game.
+\BeginKnitrBlock{myquote}<div class="myquote">There are only two hard things in Computer Science: cache invalidation and naming things.
 
-> There are only two hard things in Computer Science: cache invalidation and naming things.
-  - Phil Karlton
+-Phil Karlton
+</div>\EndKnitrBlock{myquote}
+
+Programs will often need to keep track of different things that will change during the course of a program. In this final section we'll make use of some simple variables and make a program that truly computes some stuff in response to inputs. We'll spend most of our time coding and end up having produced a simple game.
 
 ## Variables - names for changing values
 

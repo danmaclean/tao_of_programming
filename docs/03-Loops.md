@@ -1,13 +1,18 @@
 # Loops and Conditionals
 
-In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.
+\BeginKnitrBlock{myquote}<div class="myquote">With just one polka dot, nothing can be achieved.
 
-> With just one polka dot, nothing can be achieved.
- - Yayoi Kusama
+-Yayoi Kusama
+</div>\EndKnitrBlock{myquote}
+
+In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.
 
 A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated for as long as the loop definition says to. The loop definition is the the bit of writing at the top of the mouth.
 
-<img src="assets/loop.png" width="626" />
+<div class="figure">
+<img src="assets/loop.png" alt="A loop block. The yellow mouth section is the definition that describes how often the loop runs. The code inside the loop mouth is the bit that actually gets redone over and over" width="626" />
+<p class="caption">(\#fig:unnamed-chunk-2)A loop block. The yellow mouth section is the definition that describes how often the loop runs. The code inside the loop mouth is the bit that actually gets redone over and over</p>
+</div>
 
 These things make a lot more sense when you see them in use. Let's examine some loops by building some that make music!
 
@@ -47,7 +52,10 @@ Along the way we've already seen a different type of control block - a condition
 
 You can see the place for the condition in this picture as a gap after the word `if`, that gap is waiting for the programmer to drop in any sort of thing to test.
 
-<img src="assets/if-else.png" width="122" />
+<div class="figure" style="text-align: center">
+<img src="assets/if-else.png" alt="(Top) An IF block that only runs code if the condition slotted in the diamond shaped gap passes. (Bottom) An IF-ELSE block, in which the IF section works like the IF block and the ELSE section runs every time the IF section does not" width="122" />
+<p class="caption">(\#fig:unnamed-chunk-6)(Top) An IF block that only runs code if the condition slotted in the diamond shaped gap passes. (Bottom) An IF-ELSE block, in which the IF section works like the IF block and the ELSE section runs every time the IF section does not</p>
+</div>
 
 A conditional (or simply just an `if` block) is the easiest way to get a computer program make a decision and only do something in certain cases. They are abundant throughout computer programming.
 

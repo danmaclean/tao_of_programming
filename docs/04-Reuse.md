@@ -1,14 +1,12 @@
 # Re-Use
 
-Reusing code is the cornerstone of productive programming. Reusing libraries and packages built by other people is very common. Reusing your own code - packing it up into little re-usable blocks is also very handy.
+\BeginKnitrBlock{myquote}<div class="myquote">We are like dwarfs standing upon the shoulders of giants, and so able to see more and see farther than the ancients.
 
-Designing your programs such that you can re-use them will bring you great benefits. The code will be easier to build and understand, this means you'll have less trouble building it, take less time and likely have fewer bugs. 
+– Bernard of Chartres, circa 1130</div>\EndKnitrBlock{myquote}
+
+Reusing code is the cornerstone of productive programming. Reusing libraries and packages built by other people is very common. Reusing your own code - packing it up into little re-usable blocks is also very handy. Designing your programs such that you can re-use them will bring you great benefits. The code will be easier to build and understand, this means you'll have less trouble building it, take less time and likely have fewer bugs. 
 
 In this section we'll explore personal re-use of something you built by making our own Scratch blocks.
-
-> We are like dwarfs standing upon the shoulders of giants, and so able to see more and see farther than the ancients.
-– Bernard of Chartres, circa 1130
-
 
 ## Implementing blocks
 

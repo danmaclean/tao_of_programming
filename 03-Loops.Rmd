@@ -1,13 +1,17 @@
 # Loops and Conditionals
 
-In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.
+```{block2, type="myquote"}
+With just one polka dot, nothing can be achieved.
 
-> With just one polka dot, nothing can be achieved.
- - Yayoi Kusama
+-Yayoi Kusama
+
+```
+
+In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.
 
 A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated for as long as the loop definition says to. The loop definition is the the bit of writing at the top of the mouth.
 
-```{r, echo = FALSE, fig.width = 6}
+```{r, echo = FALSE, fig.width = 6, dpi=96, fig.cap = "A loop block. The yellow mouth section is the definition that describes how often the loop runs. The code inside the loop mouth is the bit that actually gets redone over and over"}
   knitr::include_graphics("assets/loop.png")
 ```
 
@@ -55,7 +59,7 @@ Along the way we've already seen a different type of control block - a condition
 
 You can see the place for the condition in this picture as a gap after the word `if`, that gap is waiting for the programmer to drop in any sort of thing to test.
 
-```{r, echo = FALSE, fig.width = 6}
+```{r, echo = FALSE, fig.width = 6, fig.align='center', dpi=96, fig.cap="(Top) An IF block that only runs code if the condition slotted in the diamond shaped gap passes. (Bottom) An IF-ELSE block, in which the IF section works like the IF block and the ELSE section runs every time the IF section does not" }
 knitr::include_graphics("assets/if-else.png")
 ```
 

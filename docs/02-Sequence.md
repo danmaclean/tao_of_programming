@@ -1,11 +1,12 @@
 # Sequence
 
-A computer program is a sequence of instructions for a computer to execute. Identifying the proper sequence of events is a vital skill. That's the main aim of this section - breaking things down into sequences. The secondary aim will be to practice iteration, by experimenting with sequences of things we'll initially get things wrong, but by iterating each time we will get closer to a good solution.
 
-> A B C
-It's easy as, 1 2 3
-As simple as, do re mi
-  - The Jackson 5
+
+\BeginKnitrBlock{myquote}<div class="myquote">A,B,C. It's easy as 1,2,3. As simple as do-re-mi.
+
+-The Jackson 5</div>\EndKnitrBlock{myquote}
+
+A computer program is a sequence of instructions for a computer to execute. Identifying the proper sequence of events is a vital skill. That's the main aim of this section - breaking things down into sequences. The secondary aim will be to practice iteration, by experimenting with sequences of things we'll initially get things wrong, but by iterating each time we will get closer to a good solution.
 
 ## Examining and building a sequence of instructions
 
