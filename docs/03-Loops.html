@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.387">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Thinking about how to program - 3&nbsp; Loops and Conditionals</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./04-Reuse.html" rel="next">
+<link href="./02-Sequence.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Loops and Conditionals</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Thinking about how to program</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Thinking-about-how-to-program.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">What is Programming?</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Reflection.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Reflection</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-Sequence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sequence</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-Loops.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Loops and Conditionals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-Reuse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-Conclusions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Final thought</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-Acknowledgements.html" class="sidebar-item-text sidebar-link">Acknowledgements</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#fixing-some-bugs" id="toc-fixing-some-bugs" class="nav-link active" data-scroll-target="#fixing-some-bugs"> <span class="header-section-number">3.1</span> Fixing some bugs</a></li>
+  <li><a href="#types-of-loop-blocks" id="toc-types-of-loop-blocks" class="nav-link" data-scroll-target="#types-of-loop-blocks"> <span class="header-section-number">3.2</span> Types of loop blocks</a></li>
+  <li><a href="#conditionals" id="toc-conditionals" class="nav-link" data-scroll-target="#conditionals"> <span class="header-section-number">3.3</span> Conditionals</a></li>
+  <li><a href="#a-creative-project" id="toc-a-creative-project" class="nav-link" data-scroll-target="#a-creative-project"> <span class="header-section-number">3.4</span> A creative project</a></li>
+  <li><a href="#in-this-section-we" id="toc-in-this-section-we" class="nav-link" data-scroll-target="#in-this-section-we"> <span class="header-section-number">3.5</span> In this section we…</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Loops and Conditionals</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Wisdom
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>With just one polka dot, nothing can be achieved.</p>
+</blockquote>
+<p><em>Yayoi Kusama</em></p>
+</div>
+</div>
+<p>In this section we will get to grips with a key control feature of programming - looping. Looping at its simplest is just doing things over and over again until you have some reason to stop. Loops are a way of making the computer really work for you.</p>
+<p>A loop is a code construct that contains code. Think of it as a box of code that gets run over and over. In Scratch the graphical metaphor is very simple, you have a block with a mouth, inside that mouth is the loop code, everything in the mouth gets repeated for as long as the loop definition says to. The loop definition is the the bit of writing at the top of the mouth.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/loop.png" class="img-fluid figure-img" width="313"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">A loop block. The yellow mouth section is the definition that describes how often the loop runs. The code inside the loop mouth is the bit that actually gets redone over and over</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>These things make a lot more sense when you see them in use. Let’s examine some loops by building some that make music!</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Do the <a href="worksheets/scratch_build_a_band.pdf">build a band worksheet</a></li>
+<li>Experiment with timing and the number of repeats in each repeat section to come up with a pleasing musical arrangement.</li>
+</ol>
+</div>
+</div>
+<p>So that’s the basic idea, loops do stuff over and over. They can do set numbers of repeats, keep going forever or keep going until something else happens.</p>
+<section id="fixing-some-bugs" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="fixing-some-bugs"><span class="header-section-number">3.1</span> Fixing some bugs</h2>
+<p>Let’s have a look at some code with loops, some of which needs fixing.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Do the <a href="worksheets/scratch_loop_debugging.pdf">loop debugging worksheet</a></li>
+<li>In your critique groups or your design journal:
+<ul>
+<li>Discuss the importance of the counter in the loop? When can it break the code?</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="types-of-loop-blocks" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="types-of-loop-blocks"><span class="header-section-number">3.2</span> Types of loop blocks</h2>
+<p>Mostly here we’ve seen the <code>repeat</code> loop block, thats the most obvious sort but there are plenty of variations.</p>
+<ul>
+<li><code>until</code> loop blocks do some code <em>until</em> something happens, that something can be specified by a e.g a sprite hits the side, or a number gets too big.</li>
+<li><code>while</code> loop blocks do some code <em>while</em> some thing is still in some state,</li>
+<li><code>forever</code> loop blocks do some code forever - this is more common than you think, especially in games for example. With these the main block of code just goes forever and stops only when something exceptional happens, like lives reaching <code>0</code>.</li>
+</ul>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>In your critique group or design journal discuss whether all these types of loop are actually interchangeable?</li>
+<li>Is there some sort of redundancy in all of these types of loop?</li>
+<li>What might be the reason for this?</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="conditionals" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="conditionals"><span class="header-section-number">3.3</span> Conditionals</h2>
+<p>Along the way we’ve already seen a different type of control block - a conditional. This is a block that contains code that will only be done if something specified by the programmer is true. You’ll notice this block because it begins with <code>if</code> and then there’s some thing that must be tested to see if its true, this is the actual condition to be tested.</p>
+<p>You can see the place for the condition in this picture as a gap after the word <code>if</code>, that gap is waiting for the programmer to drop in any sort of thing to test.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/if-else.png" class="img-fluid figure-img" width="61"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">(Top) An IF block that only runs code if the condition slotted in the diamond shaped gap passes. (Bottom) An IF-ELSE block, in which the IF section works like the IF block and the ELSE section runs every time the IF section does not</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A conditional (or simply just an <code>if</code> block) is the easiest way to get a computer program make a decision and only do something in certain cases. They are abundant throughout computer programming.</p>
+<p>In the upper form the code in the ‘mouth’ will only be run if the conditional test passes. If it doesn’t pass the test none of that code will be run. The rest of the program will carry on as if that code wasn’t even there.</p>
+<p>The <code>if-else</code> form provides a way to be explicit about what to do if the condition doesn’t pass. If the condition for <code>if</code> doesn’t pass, then the code in the <code>else</code> block runs. Note that the two blocks are mutually exclusive, if one block runs, the other won’t.</p>
+</section>
+<section id="a-creative-project" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="a-creative-project"><span class="header-section-number">3.4</span> A creative project</h2>
+<p>It’s time to put some of our skills and creativity to use and build something brand new. For this next section we will build something personalised and/or exciting. Choose one of the activities below and enjoy building something you like!</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Make an interactive collage about yourself <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, using the <a href="worksheets/scratch_about_me.pdf">About Me worksheet</a> for a bit of guidance.</li>
+</ol>
+<p>or</p>
+<ol start="2" type="1">
+<li>Make a music video. Use the <a href="worksheets/scratch_music_video.pdf">Music Video worksheet</a></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="in-this-section-we" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="in-this-section-we"><span class="header-section-number">3.5</span> In this section we…</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We have encountered blocks and conditionals and use them to make stuff happen over and over, and only when we want it to. They save us from having to write out repetitive code.</p>
+<p>These two types of blocks are at the heart of controlling the sequence of execution of code in a program. Practice with loops and conditionals will make you a powerful master of the things a computer does.</p>
+</div>
+</div>
+
+
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Or an alter-ego you’ve constructed for the purposes of this exercise!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-Sequence.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sequence</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-Reuse.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,29 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Thinking about how to program"
+  author: "Dan MacLean"
+  date: "May 2022"
+  search: true
+  downloads: [pdf]
+  sharing: [twitter, facebook]
+  chapters: 
+    - index.qmd
+    - 01-Reflection.qmd
+    - 02-Sequence.qmd
+    - 03-Loops.qmd
+    - 04-Reuse.qmd
+    - 05-Variables.qmd
+    - 06-Conclusions.qmd
+  appendices:
+    - 07-Acknowledgements.qmd
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+comments:
+  hypothesis: true
