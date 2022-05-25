@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dan MacLean">
-<meta name="dcterms.date" content="2022-05-01">
 
-<title>Thinking about how to program</title>
+<title>Thinking about how to program - 4&nbsp; Re-Use</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,7 +24,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./01-Reflection.html" rel="next">
+<link href="./05-Variables.html" rel="next">
+<link href="./03-Loops.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Thinking about how to program</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -109,7 +108,7 @@ ul.task-list{list-style: none;}
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">What is Programming?</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">What is Programming?</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -129,7 +128,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-Reuse.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></a>
+  <a href="./04-Reuse.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,7 +165,11 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-programming" id="toc-what-is-programming" class="nav-link active" data-scroll-target="#what-is-programming">What is Programming?</a></li>
+  <li><a href="#implementing-blocks" id="toc-implementing-blocks" class="nav-link active" data-scroll-target="#implementing-blocks"> <span class="header-section-number">4.1</span> Implementing blocks</a></li>
+  <li><a href="#fixing-some-bugs" id="toc-fixing-some-bugs" class="nav-link" data-scroll-target="#fixing-some-bugs"> <span class="header-section-number">4.2</span> Fixing some bugs</a></li>
+  <li><a href="#abstraction" id="toc-abstraction" class="nav-link" data-scroll-target="#abstraction"> <span class="header-section-number">4.3</span> Abstraction</a></li>
+  <li><a href="#a-major-insight---its-blocks-all-the-way-down" id="toc-a-major-insight---its-blocks-all-the-way-down" class="nav-link" data-scroll-target="#a-major-insight---its-blocks-all-the-way-down"> <span class="header-section-number">4.4</span> A major insight - its blocks all the way down</a></li>
+  <li><a href="#in-this-section-we" id="toc-in-this-section-we" class="nav-link" data-scroll-target="#in-this-section-we"> <span class="header-section-number">4.5</span> In this section we …</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +178,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Thinking about how to program</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></h1>
 </div>
 
 
@@ -184,28 +187,14 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dan MacLean </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2022</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<section id="what-is-programming" class="level1 unnumbered">
-<h1 class="unnumbered">What is Programming?</h1>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -216,24 +205,98 @@ Wisdom
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>This is not going to go the way you think.</p>
+<p>We are like dwarfs standing upon the shoulders of giants, and so able to see more and see farther than the ancients.</p>
 </blockquote>
-<p><em>Luke Skywalker</em></p>
+<p><em>Bernard of Chartres</em>, <em>circa 1130</em></p>
 </div>
 </div>
-<p>Programming is the task of creating instructions so that a computer can perform a task for you.</p>
-<p>At the highest level programming has two steps: design a solution to a problem, then encode the solution so a computer can do the work. The first part is a challenge for creative logic, the second a challenge for language. Programming a computer takes more of our imagination and creativity than it does of our cold, hard logic or mathematics.</p>
-<p>This guide is intended to help a beginner reach an understanding of how to design a solution to a problem in such a way that it can later be translated into a programming language. No coding in a programming language is demonstrated in this guide, instead the guide focuses on the building blocks of solutions for programming: sequences, loops, events, conditions, and on the key computational thinking practices: experimentation and iteration, testing, re-use and abstraction. In this guide we use a graphical tool called Scratch to create and apply these concepts in a computer.</p>
-<p>The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.</p>
-<p>Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you’ve seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.</p>
-<p>For this course you will need.</p>
+<p>Reusing code is the cornerstone of productive programming. Reusing libraries and packages built by other people is very common. Reusing your own code - packing it up into little re-usable blocks is also very handy. Designing your programs such that you can re-use them will bring you great benefits. The code will be easier to build and understand, this means you’ll have less trouble building it, take less time and likely have fewer bugs.</p>
+<p>In this section we’ll explore personal re-use of something you built by making our own Scratch blocks.</p>
+<section id="implementing-blocks" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="implementing-blocks"><span class="header-section-number">4.1</span> Implementing blocks</h2>
+<p>Let’s begin by making some blocks of our own.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li>A computer with an internet connection</li>
-<li>A notebook</li>
-<li>A friend (actually this is optional, but will be helpful).</li>
+<li>Do the <a href="worksheets/scratch_characters.pdf">Characters worksheet</a>.</li>
+<li>Make sure you define two characters and two behaviours per character
+<ul>
+<li>can you make <code>broadcasting</code> work between your characters? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul></li>
+<li>Discuss with a friend (or write in your design journal) about how <code>Make a Block</code> works. Come up with a description for a person new to blocks.</li>
+<li>When might you use <code>Make a Block</code>?</li>
+<li>I asserted that re-using blocks results in fewer code bugs. Discuss how that be justified?</li>
 </ol>
+</div>
+</div>
+<p>Hopefully through these exercises you’ve seen that code re-use is a timesaver - once you’ve worked out how to actually implement the code in new block that is.</p>
+</section>
+<section id="fixing-some-bugs" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="fixing-some-bugs"><span class="header-section-number">4.2</span> Fixing some bugs</h2>
+<p>Let’s get a bit more practice and intuition about how blocks work by fixing some broken ones.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Do the <a href="worksheets/scratch_blocks_debugging.pdf">Blocks debugging worksheet</a></li>
+<li>Discuss the following:
+<ul>
+<li>How big or small do blocks have to be?</li>
+<li>Would you ever want a huge block that did lots, or are smaller specific task blocks best?
+<ul>
+<li>Is there an optimal level of re-use?</li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="abstraction" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="abstraction"><span class="header-section-number">4.3</span> Abstraction</h2>
+<p>A big plus to constructing blocks is that they are a tool for abstraction - they allow us to combine multiple small abilities into one larger, unifiying ability. This means that the amount of thinking we have to do about how our program works is less. In turn this means it is easier for us to progam.</p>
+</section>
+<section id="a-major-insight---its-blocks-all-the-way-down" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="a-major-insight---its-blocks-all-the-way-down"><span class="header-section-number">4.4</span> A major insight - its blocks all the way down</h2>
+<p>If the concept of blocks seems like it might be a bit generally applicable, you’re getting the key lesson of this section. All programming is either defining or re-using blocks of code. In this section with Scratch, its mostly been that our blocks have been a few commands that we want to re-use a couple of times. At different layers the blocks might be different levels of organisation of software. Some blocks with a few commands in each might be strung together into a bigger block called a script or program. A few scripts or programs might be strung together into a workflow, and there are levels under and above each of those. Beginning to think of programming at different levels of abstraction is a significant step in building your conceptual model of how programs and software in general works.</p>
+</section>
+<section id="in-this-section-we" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="in-this-section-we"><span class="header-section-number">4.5</span> In this section we …</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Roundup
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this section we built and used some custom blocks. We’ve seen how they can be reused, and remixed - a process called abstraction and modularisation. These practices vastly reduce work for the programmer and increase integrity of our programs.</p>
+</div>
+</div>
 
 
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Don’t panic if this doesn’t work - broadcasting in Scratch highlights a technique in which we make different processes or scripts ‘talk’ to each other through messages. Its not a core technique by any means but the metaphor of ‘talking’ is here particularly strong - and it’s quite fun - so its worth a go.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -318,10 +381,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./03-Loops.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Loops and Conditionals</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-Reflection.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Reflection</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-Variables.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

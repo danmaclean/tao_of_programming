@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dan MacLean">
-<meta name="dcterms.date" content="2022-05-01">
 
-<title>Thinking about how to program</title>
+<title>Thinking about how to program - 5&nbsp; Variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,7 +24,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./01-Reflection.html" rel="next">
+<link href="./06-Conclusions.html" rel="next">
+<link href="./04-Reuse.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Thinking about how to program</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -109,7 +108,7 @@ ul.task-list{list-style: none;}
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">What is Programming?</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">What is Programming?</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -134,7 +133,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></a>
+  <a href="./05-Variables.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,7 +165,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-programming" id="toc-what-is-programming" class="nav-link active" data-scroll-target="#what-is-programming">What is Programming?</a></li>
+  <li><a href="#variables---names-for-changing-values" id="toc-variables---names-for-changing-values" class="nav-link active" data-scroll-target="#variables---names-for-changing-values"> <span class="header-section-number">5.1</span> Variables - names for changing values</a></li>
+  <li><a href="#building-a-game" id="toc-building-a-game" class="nav-link" data-scroll-target="#building-a-game"> <span class="header-section-number">5.2</span> Building a game</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +175,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Thinking about how to program</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Variables</span></h1>
 </div>
 
 
@@ -184,28 +184,14 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dan MacLean </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2022</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<section id="what-is-programming" class="level1 unnumbered">
-<h1 class="unnumbered">What is Programming?</h1>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -216,24 +202,74 @@ Wisdom
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>This is not going to go the way you think.</p>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
 </blockquote>
-<p><em>Luke Skywalker</em></p>
+<p><em>Phil Karlton</em></p>
 </div>
 </div>
-<p>Programming is the task of creating instructions so that a computer can perform a task for you.</p>
-<p>At the highest level programming has two steps: design a solution to a problem, then encode the solution so a computer can do the work. The first part is a challenge for creative logic, the second a challenge for language. Programming a computer takes more of our imagination and creativity than it does of our cold, hard logic or mathematics.</p>
-<p>This guide is intended to help a beginner reach an understanding of how to design a solution to a problem in such a way that it can later be translated into a programming language. No coding in a programming language is demonstrated in this guide, instead the guide focuses on the building blocks of solutions for programming: sequences, loops, events, conditions, and on the key computational thinking practices: experimentation and iteration, testing, re-use and abstraction. In this guide we use a graphical tool called Scratch to create and apply these concepts in a computer.</p>
-<p>The guide aims to teach an understanding of the way that programs are built, before we understand how programs are encoded in a language.</p>
-<p>Be prepared, this is not a typical programming course. It will be a largely self led exploration of concepts and ideas, not a slog through syntax and rote copying. If you’ve seen a programming guide before, forget it. Here your best tools will be your imagination, a notebook, a friend and your powers of reflection and criticism. This guide will be your research partner in the exploration helping you to reveal the fundamental concepts of programming.</p>
-<p>For this course you will need.</p>
+<p>Programs will often need to keep track of different things that will change during the course of a program. In this final section we’ll make use of some simple variables and make a program that truly computes some stuff in response to inputs. We’ll spend most of our time coding and end up having produced a simple game.</p>
+<section id="variables---names-for-changing-values" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="variables---names-for-changing-values"><span class="header-section-number">5.1</span> Variables - names for changing values</h2>
+<p>Consider a program that counts some things - minimally it is going to need a tally that it can increase as it finds each new thing. We use code constructs called variables to keep track of changing things. Variables have two parts - a name and a value. So in our counter example, the number of things we’ve seen is the value, whatever we decide to call that in our program is our name.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hold on, isn’t that just algebra? When did this turn into maths? What sort of scam are you pulling here?</p>
+</div>
+</div>
+<p>Yes, it is quite like algebra in one sense. But in another sense, the most important sense - the practical - it’s just names for stuff you don’t know the value of at the start. Another distinction is that variables don’t need to be just numbers. In other contexts you can keep track of text, pictures, sounds and even code itself. Don’t get hung up too much on variables being for numbers.</p>
+</section>
+<section id="building-a-game" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="building-a-game"><span class="header-section-number">5.2</span> Building a game</h2>
+<p>Let’s go crazy and jump straight into building a simple game that will allow us many opportunities for keeping track of internal data computed by your script in variables.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For you to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li>A computer with an internet connection</li>
-<li>A notebook</li>
-<li>A friend (actually this is optional, but will be helpful).</li>
+<li>Do the <a href="worksheets/scratch_maze.pdf">Maze worksheet</a></li>
+<li>Implement some ‘collectable’ sprites <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that increment a score variable by one when your player sprite touches them. Check out the ‘make a variable’ block to do this</li>
+<li>Implement some moving ‘baddie’ sprites <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> that decrement a life variable when your player sprite touches them. Add a “game over” process that stops the game when you run out of lives.</li>
+<li>Consider adding a high score table. Discuss with a friend how you might do this and write your proposal in your design journal <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>?</li>
 </ol>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Roundup
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this section we looked at variables. We saw that these are names for data that our program uses and changes accordingly as the program progresses. We marshalled our programming skills to create a game.</p>
+</div>
+</div>
 
 
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Like coins or cherries or something.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Like ghosts or turtles or something.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>For bonus points, actually implement it.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -318,10 +354,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./04-Reuse.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Re-Use</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-Reflection.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Reflection</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06-Conclusions.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Final thought</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
